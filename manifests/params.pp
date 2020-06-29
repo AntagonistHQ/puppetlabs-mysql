@@ -52,7 +52,7 @@ class mysql::params {
           }
           $python_package_name = 'MySQL-python'
         }
-        /^(RedHat|CentOS|Scientific|OracleLinux)$/: {
+        /^(RedHat|CentOS|Scientific|OracleLinux|CloudLinux)$/: {
           if versioncmp($::operatingsystemmajrelease, '7') >= 0 {
             $provider = 'mariadb'
             if versioncmp($::operatingsystemmajrelease, '8') >= 0 {
